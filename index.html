@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Phone Book</title>
+</head>
+<body>
+    <header>
+        <h1>Phone Book</h1>
+    </header>
+    <main>
+        <section id="contact-display">
+            <div>
+            <h2 class="contacts">Contacts</h2>
+            <input type="search" id="mySearch" placeholder="Search by Email..">
+            <button onclick="myFunction()">Search</button>
+            <script>
+            function myFunction() {
+              var x = document.getElementById("email").value;
+              document.getElementById("data").innerHTML = x;
+            }
+            </script>
+            </div>
+            <table>
+                <tr id="head">
+                    <thead>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </thead>
+                </tr>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </section>
+        <section id="new-contact">
+            <h2>Create a new contact</h2>
+            <form>
+                <div>
+                    <label for="name">Name<span style="color: red">*</span>:</label>
+                    <input id="name" style="margin-left: 110px;" type="text"  maxlength="15" required>
+                </div>
+                
+                <div>
+                    <label for="tel">Phone Number:</label>
+                    <input id="tel" style="margin-left: 50px;" type="tel" maxlength="10">
+                </div>
+                <div>
+                    <label for="email">Email<span style="color: red">*</span>:</label>
+                    <input id="email"  style="margin-left: 110px;" type="email" maxlength="30" required>
+                </div>
+                
+                <div>
+                    <button>Create contacts</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Developed by <b>Harish Bharti</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
